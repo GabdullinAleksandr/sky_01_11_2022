@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USERS</title>
+</head>
+<body>
+    <header>
+        <form action="/users" method="get">
+            <input type="search" name="term"/>
+            <input type="submit" value="search"/>
+        </form>
+    </header>
+    <div>
+        {% for user in users %}
+            {% if search in user %}
+                <p>{{user}}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>
